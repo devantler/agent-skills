@@ -58,7 +58,7 @@ test-validate: ## Run validation script on the test fixtures
 	$(VALIDATE_SCRIPT) -d $(TEST_DIR)/image-automation
 
 test-check-deprecated: ## Test deprecated API scan outcomes and failure propagation
-	bash skills/gitops-repo-audit/scripts/check-deprecated.test.sh
+	tests/scripts/check-deprecated.test.sh
 
 validate-skills: ## Validate skill packaging against the Agent Skills spec
 	gh skill publish --dry-run
